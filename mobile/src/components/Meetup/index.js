@@ -18,8 +18,8 @@ export default function Meetup({ data, onButton, ButtonText }) {
   return (
     <Container>
       <Image
-        source={{
-          uri: data.imagem.url,
+        source={{uri: data.imagem ? data.imagem.url :
+           'https://blogs.mulesoft.com/wp-content/uploads/2017/11/mulesoft-developer-meetups.png'
         }}
       />
       <Info>
@@ -36,8 +36,9 @@ export default function Meetup({ data, onButton, ButtonText }) {
           <Icon name="person" size={14} color="#999" />
           <Host>Organizador: {data.User.name}</Host>
         </IconText>
+        <Buttons onPress={onButton}>{ButtonText}</Buttons>
       </Info>
-      <Buttons onPress={onButton}>{ButtonText}</Buttons>
+
     </Container>
   );
 }

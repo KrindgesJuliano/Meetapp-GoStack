@@ -5,11 +5,11 @@ export const Container = styled.View`
   background: #fff;
   border-radius: 4px;
   display: flex;
-  padding: 20px;
+
 `;
 
 export const Image = styled.Image`
-  flex: 1;
+  width: 100%;
   height: 150px;
 `;
 
@@ -22,6 +22,7 @@ export const IconText = styled.View`
 
 export const Info = styled.View`
   padding: 20px;
+
 `;
 
 export const Title = styled.Text`
@@ -49,4 +50,5 @@ export const Host = styled.Text`
   font-size: 13px;
   margin-left: 5px;
   color: #999;
+  margin-bottom: 10px;
 `;
